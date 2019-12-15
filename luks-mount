@@ -1,0 +1,9 @@
+#!/bin/sh
+export PATH='/usr/bin:/bin:/sbin:/usr/sbin'
+
+while [ ! -L /dev/mapper/crypt_sdcard ]
+do
+	cryptsetup luksOpen /dev/mmcblk0p2 crypt_sdcard
+done
+
+. /scripts/local-top/cryptroot
