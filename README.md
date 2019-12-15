@@ -17,7 +17,8 @@ So to work around this, I created a script: luks-mount
 
 This script forces: cryptsetup luksOpen /dev/mmcblk0p2 crypt_sdcard
 
-Thus you get the password prompt to decrypt the LUKS partition
+Thus you get the password prompt to decrypt the LUKS partition.
+
 Whilst building in the chroot, place it in: /usr/share/initramfs-tools/scripts/fattusrattus
 
 Now to get it to run when Dropbear SSH starts, you need to change the command put at the start (in front of the ssh keys) of: 
